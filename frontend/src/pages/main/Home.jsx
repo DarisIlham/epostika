@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const backgroundImage =
-   "/images/home/jelajah.webp";;
+   "/images/home/homee.webp";;
 
 function Home() {
   return (
@@ -24,7 +24,7 @@ function Home() {
       <section className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-8 text-center">
         {/* Shape judul */}
         <div className="rounded-3xl border border-white/50 bg-black/30 px-6 py-8 shadow-2xl shadow-black/40 backdrop-blur-sm sm:px-10 sm:py-10 md:rounded-[2.5rem] md:px-16 md:py-12">
-          <h1 className="font-serif text-4xl leading-tight font-medium tracking-tight text-stone-50 sm:text-5xl md:text-7xl lg:text-8xl">
+          <h1 className="font-cronde text-4xl leading-tight font-bold  text-stone-50 sm:text-5xl md:text-7xl lg:text-8xl">
             Epostika Kelana{" "}
             <br />
             <span className="text-amber-300 italic">X</span>{" "}
