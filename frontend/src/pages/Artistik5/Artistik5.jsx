@@ -5,8 +5,7 @@ import ArtworkShowcase from "../../components/ArtworkShowcase.jsx";
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
 
-const imageUrl = (filename) =>
-  `${imageBaseUrl}/images/artistik5/${filename}`;
+const imageUrl = (filename) => `${imageBaseUrl}/images/artistik5/${filename}`;
 
 const artworks = [
   {
@@ -70,9 +69,7 @@ const artworks = [
 
 function Artistik5() {
   const [pageEntered, setPageEntered] = useState(false);
-  const [activeArtworkId, setActiveArtworkId] = useState(
-    artworks[0].id,
-  );
+  const [activeArtworkId, setActiveArtworkId] = useState(artworks[0].id);
 
   // Animasi headline
   useEffect(() => {
@@ -87,15 +84,11 @@ function Artistik5() {
 
   // Mengubah tombol aktif berdasarkan panel dalam viewport
   useEffect(() => {
-    const sections = document.querySelectorAll(
-      "[data-artwork-section]",
-    );
+    const sections = document.querySelectorAll("[data-artwork-section]");
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleEntry = entries.find(
-          (entry) => entry.isIntersecting,
-        );
+        const visibleEntry = entries.find((entry) => entry.isIntersecting);
 
         if (visibleEntry) {
           setActiveArtworkId(visibleEntry.target.id);
@@ -141,13 +134,13 @@ function Artistik5() {
       <div className="mx-auto w-full max-w-6xl">
         {/* Headline */}
         <header
-          className={`mx-auto flex min-h-16 w-full max-w-md items-center justify-center bg-[#ffdc63] px-6 py-4 text-center shadow-sm transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
+          className={`relative mx-auto flex min-h-20 w-full max-w-xl items-center justify-center overflow-hidden rounded-[2rem] border border-[#315c59]/10 bg-white/75 px-6 py-5 text-center shadow-[0_16px_45px_rgba(39,72,70,0.10)] backdrop-blur-sm transition-all duration-700 ease-out before:absolute before:inset-x-10 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[#168494]/50 before:to-transparent after:absolute after:-right-8 after:-top-10 after:size-24 after:rounded-full after:bg-[#168494]/10 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
             pageEntered
               ? "translate-y-0 opacity-100"
               : "translate-y-[35vh] opacity-0"
           }`}
         >
-          <h1 className="font-cronde text-3xl font-normal text-stone-950 sm:text-4xl md:text-5xl">
+          <h1 className="relative z-10 font-cronde text-3xl font-medium text-[#254846] sm:text-4xl md:text-5xl">
             Home Decor Serving
           </h1>
         </header>

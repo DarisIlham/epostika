@@ -1,16 +1,36 @@
-function ArtworkImage({
-  src,
-  alt,
-  priority = false,
-  className = "",
-}) {
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      className="size-4"
+    >
+      <path
+        d="M5 12h14m-5-5 5 5-5 5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ArtworkImage({ src, alt, priority = false, className = "" }) {
   return (
     <div
-      className={`relative overflow-hidden bg-[#ffdc63] ${className}`}
+      className={`relative overflow-hidden bg-gradient-to-br from-[#dcc5a4] via-[#cda77a] to-[#a96f49] ${className}`}
     >
-      <span className="absolute inset-0 flex items-center justify-center px-3 text-center font-sora text-xs font-medium text-stone-800 sm:text-sm">
-        Foto karya
-      </span>
+      {/* Placeholder tetap terlihat ketika gambar belum tersedia. */}
+      <div className="absolute inset-0 grid place-items-center">
+        <div className="text-center">
+          <span className="mx-auto mb-3 block size-9 rounded-full border border-white/50 bg-white/20" />
+          <span className="rounded-full bg-[#f7f1e8]/75 px-4 py-2 font-sora text-xs font-medium text-[#694a37] backdrop-blur-sm sm:text-sm">
+            Foto karya
+          </span>
+        </div>
+      </div>
 
       <img
         key={src}
@@ -22,7 +42,12 @@ function ArtworkImage({
         onError={(event) => {
           event.currentTarget.hidden = true;
         }}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover/artwork:scale-[1.03]"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#173b3a]/25 to-transparent"
       />
     </div>
   );
@@ -37,52 +62,117 @@ function ArtworkShowcase({
   priority = false,
   showCollectionLabel = false,
 }) {
+  const artworkPosition =
+    navigationItems.findIndex((item) => item.id === artwork.id) + 1;
+
   return (
     <article
       id={artwork.id}
       data-artwork-section
-      className="w-full scroll-mt-24 sm:scroll-mt-28"
+      className="group/artwork relative w-full scroll-mt-24 overflow-hidden rounded-[2rem] border border-[#315c59]/10 bg-white/75 p-4 shadow-[0_20px_65px_rgba(39,72,70,0.10)] backdrop-blur-sm sm:scroll-mt-28 sm:rounded-[2.5rem] sm:p-7 lg:p-10"
     >
-      {showCollectionLabel && (
-        <div
-          className={`mb-10 flex min-h-14 w-full max-w-64 items-center justify-center bg-[#ffdc63] px-6 py-3 ${
-            reverse ? "lg:ml-auto" : ""
-          }`}
-        >
-          <h2 className="font-cronde text-2xl font-normal text-stone-950">
-            {artwork.collection}
-          </h2>
-        </div>
-      )}
+      {/* Aksen organik bertema laut dan kayu. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute -right-20 -top-24 size-56 rounded-full border-[2.5rem] border-[#168494]/10" />
+        <div className="absolute -bottom-24 -left-20 size-52 rounded-full bg-[#b8794e]/10 blur-2xl" />
+        <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#168494]/35 to-transparent" />
+      </div>
 
-      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
-        {/* Foto dan navigasi */}
-        <div className={reverse ? "lg:order-2" : ""}>
-          <div className="grid grid-cols-[minmax(8rem,0.85fr)_minmax(0,1.15fr)] items-center gap-5 sm:gap-8">
-            <ArtworkImage
-              src={artwork.image.src}
-              alt={artwork.image.alt}
-              priority={priority}
-              className="aspect-square w-full rounded-full shadow-lg shadow-stone-900/10"
-            />
+      <div className="relative">
+        {showCollectionLabel && (
+          <div
+            className={`mb-7 flex items-center gap-3 sm:mb-9 ${
+              reverse ? "lg:justify-end" : ""
+            }`}
+          >
+            <span className="h-px w-8 bg-[#b8794e]" />
+            <p className="font-sora text-[10px] font-semibold uppercase tracking-[0.2em] text-[#76533d] sm:text-xs">
+              Koleksi {artwork.collection}
+            </p>
+          </div>
+        )}
 
-            <div className="min-w-0 font-sora">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-stone-500 sm:text-sm">
-                Nama karya
-              </p>
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          {/* Foto karya */}
+          <div className={reverse ? "lg:order-2" : ""}>
+            <div className="relative">
+              <ArtworkImage
+                src={artwork.image.src}
+                alt={artwork.image.alt}
+                priority={priority}
+                className="aspect-[4/3] w-full rounded-[1.5rem] shadow-[0_18px_45px_rgba(39,72,70,0.14)] sm:rounded-[2rem]"
+              />
 
-              <h3 className="font-cronde text-2xl leading-tight font-normal text-stone-950 sm:text-3xl md:text-4xl">
-                {artwork.title}
-              </h3>
+              <span className="absolute left-4 top-4 rounded-full border border-white/45 bg-[#f7f1e8]/90 px-3 py-1.5 font-sora text-[10px] font-semibold tracking-[0.16em] text-[#76533d] shadow-sm backdrop-blur-sm">
+                {String(artworkPosition).padStart(2, "0")} /{" "}
+                {String(navigationItems.length).padStart(2, "0")}
+              </span>
             </div>
           </div>
 
-          {/* Navigasi antar-panel */}
-          <nav
-            aria-label="Navigasi karya lukisan"
-            className="mt-8 grid grid-cols-3 gap-3 sm:mt-10 sm:gap-5"
+          {/* Informasi karya */}
+          <div
+            className={`font-sora ${reverse ? "lg:order-1" : ""}`}
           >
-            {navigationItems.map((item) => {
+            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0d747c] sm:text-xs">
+              Karya resin · {artwork.collection}
+            </p>
+
+            <h3 className="font-cronde text-4xl font-medium leading-none tracking-tight text-[#254846] sm:text-5xl lg:text-6xl">
+              {artwork.title}
+            </h3>
+
+            <div className="mt-6 rounded-[1.5rem] border border-[#b8794e]/15 bg-[#f7f1e8]/80 p-5 sm:mt-8 sm:p-6">
+              <p className="text-sm leading-7 text-[#536967] sm:text-base sm:leading-8">
+                <strong className="font-semibold text-[#294b49]">
+                  {artwork.descriptionLead}
+                </strong>{" "}
+                {artwork.description}
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {artwork.instagramUrl && (
+                <a
+                  href={artwork.instagramUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#0d747c]/20 bg-white/75 px-4 py-2.5 text-xs font-semibold text-[#0d747c] transition hover:border-[#0d747c] hover:bg-[#0d747c] hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
+                >
+                  Instagram
+                  <ArrowIcon />
+                </a>
+              )}
+
+              {artwork.commerceUrl && (
+                <a
+                  href={artwork.commerceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#76533d] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#5f402e] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#b8794e]/25 sm:text-sm"
+                >
+                  E-commerce
+                  <ArrowIcon />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Navigasi antar-karya; bentuk dan ukurannya selalu konsisten. */}
+        <nav
+          aria-label={`Navigasi karya ${artwork.collection}`}
+          className="mt-8 border-t border-[#315c59]/10 pt-5 sm:mt-10 sm:pt-6"
+        >
+          <p className="mb-3 font-sora text-[10px] font-semibold uppercase tracking-[0.18em] text-[#7a8d8b]">
+            Pilih karya
+          </p>
+
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
+            {navigationItems.map((item, index) => {
               const isActive = activeArtworkId === item.id;
 
               return (
@@ -92,56 +182,25 @@ function ArtworkShowcase({
                   aria-pressed={isActive}
                   aria-label={`Pergi ke ${item.title}`}
                   onClick={() => onNavigate(item.id)}
-                  className={`aspect-square w-full max-w-24 justify-self-center rounded-full px-2 font-sora text-[11px] font-semibold transition duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950 sm:max-w-28 sm:text-sm ${
+                  className={`flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-full border px-3 py-2 font-sora text-[11px] font-semibold leading-tight transition duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:min-h-12 sm:text-sm ${
                     isActive
-                      ? "scale-105 bg-stone-950 text-[#ffdc63] shadow-lg ring-4 ring-[#ffdc63]/50"
-                      : "bg-[#ffdc63] text-stone-950 hover:-translate-y-1 hover:bg-[#f3ca43] hover:shadow-md"
+                      ? "border-[#0d747c] bg-[#0d747c] text-white shadow-md shadow-[#0d747c]/15"
+                      : "border-[#315c59]/15 bg-[#f7f1e8]/80 text-[#536967] hover:-translate-y-0.5 hover:border-[#b8794e]/40 hover:bg-[#eadbc5] hover:text-[#694a37]"
                   }`}
                 >
-                  {item.title}
+                  <span
+                    className={`hidden text-[9px] tracking-[0.12em] sm:inline ${
+                      isActive ? "text-white/65" : "text-[#b8794e]"
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="truncate">{item.title}</span>
                 </button>
               );
             })}
-          </nav>
-        </div>
-
-        {/* Deskripsi karya */}
-        <div
-          className={`font-sora ${reverse ? "lg:order-1" : ""}`}
-        >
-          <div className="border-l-4 border-[#ffdc63] pl-5 sm:pl-7">
-            <p className="text-base leading-relaxed text-stone-800 sm:text-lg sm:leading-8">
-              <strong className="font-bold text-stone-950">
-                {artwork.descriptionLead}
-              </strong>{" "}
-              {artwork.description}
-            </p>
           </div>
-
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold sm:text-base">
-            {artwork.instagramUrl && (
-              <a
-                href={artwork.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-700 underline-offset-4 transition hover:text-blue-900 hover:underline"
-              >
-                Instagram
-              </a>
-            )}
-
-            {artwork.commerceUrl && (
-              <a
-                href={artwork.commerceUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-700 underline-offset-4 transition hover:text-blue-900 hover:underline"
-              >
-                Akses e-commerce
-              </a>
-            )}
-          </div>
-        </div>
+        </nav>
       </div>
     </article>
   );

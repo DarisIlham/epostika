@@ -1,21 +1,12 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
 
 const categories = [
-  {
-    id: 1,
-    title: "Lukisan",
-    path: "/artistik1",
-    image: "lukisan.webp",
-  },
-  {
-    id: 2,
-    title: "Tas",
-    path: "/artistik2",
-    image: "tas.webp",
-  },
+  { id: 1, title: "Lukisan", path: "/artistik1", image: "lukisan.webp" },
+  { id: 2, title: "Tas", path: "/artistik2", image: "tas.webp" },
   {
     id: 3,
     title: "Lampu Tidur",
@@ -34,24 +25,14 @@ const categories = [
     path: "/artistik5",
     image: "home-decor-serving.webp",
   },
-  {
-    id: 6,
-    title: "Coaster",
-    path: "/artistik6",
-    image: "coaster.webp",
-  },
+  { id: 6, title: "Coaster", path: "/artistik6", image: "coaster.webp" },
   {
     id: 7,
     title: "Jam Meja",
     path: "/artistik7",
     image: "jam-meja.webp",
   },
-  {
-    id: 8,
-    title: "Cermin",
-    path: "/artistik8",
-    image: "cermin.webp",
-  },
+  { id: 8, title: "Cermin", path: "/artistik8", image: "cermin.webp" },
   {
     id: 9,
     title: "Lukisan Kecil",
@@ -60,31 +41,133 @@ const categories = [
   },
 ];
 
-function Jelajah() {
+function ArrowIcon({ direction }) {
   return (
-    <main className="min-h-svh bg-[#fbfaf8] px-4 py-10 sm:px-6 sm:py-14 lg:py-20">
-      <section className="mx-auto w-full max-w-5xl">
-        {/* Headline */}
-        <header className="mx-auto mb-10 flex min-h-20 w-full max-w-2xl items-center justify-center rounded-sm bg-[#ffdb68] px-5 py-4 text-center shadow-sm sm:mb-14 sm:min-h-24">
-          <h1 className="font-serif text-2xl font-semibold tracking-wide text-stone-900 sm:text-3xl md:text-4xl">
-            Jelajah Sigur.id
-          </h1>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      className={`size-5 ${direction === "left" ? "rotate-180" : ""}`}
+    >
+      <path
+        d="M5 12h14m-5-5 5 5-5 5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function Jelajah() {
+  const carouselRef = useRef(null);
+
+  const moveCarousel = (direction) => {
+    const carousel = carouselRef.current;
+
+    if (!carousel) return;
+
+    carousel.scrollBy({
+      left: direction * carousel.clientWidth * 0.82,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <main className="relative min-h-svh overflow-hidden bg-[#f5f0e7] font-sora text-[#173b3a]">
+      {/* Elemen dekoratif bertema laut dan kayu. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 overflow-hidden"
+      >
+        <div className="absolute -right-36 -top-28 size-[25rem] rounded-full border-[4.5rem] border-[#168494]/10 sm:size-[34rem]" />
+        <div className="absolute -left-32 top-[42%] size-80 rounded-full bg-[#b8794e]/10 blur-3xl sm:size-[30rem]" />
+        <div className="absolute -bottom-48 right-[8%] size-[30rem] rounded-full bg-[#168494]/10 blur-3xl" />
+
+        <svg
+          viewBox="0 0 1440 220"
+          preserveAspectRatio="none"
+          className="absolute bottom-0 h-32 w-full opacity-60 sm:h-44"
+        >
+          <path
+            d="M0 130C220 50 380 210 610 122C840 34 1020 170 1440 72V220H0Z"
+            fill="#dce9e6"
+          />
+          <path
+            d="M0 175C270 86 470 230 740 145C1010 60 1180 170 1440 120V220H0Z"
+            fill="#c8dfdc"
+          />
+        </svg>
+      </div>
+
+      <section className="relative z-10 mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+        <header className="mb-10 sm:mb-14 lg:flex lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <div className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0d747c] sm:text-xs">
+              <span className="h-px w-10 bg-[#0d747c]" />
+              Epostika Kelana × Sigur.id
+            </div>
+
+            <h1 className="font-cronde text-5xl font-medium leading-[0.95] tracking-tight text-[#254846] sm:text-6xl lg:text-7xl">
+              Jelajah Sigur.id
+            </h1>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-[#536967] sm:text-base">
+              Temukan sembilan karya resin yang mempertemukan hangatnya kayu
+              dengan warna dan ketenangan laut.
+            </p>
+          </div>
+
+          <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#b8794e]/25 bg-white/65 px-4 py-2 text-xs font-medium text-[#76533d] shadow-sm backdrop-blur-sm lg:mt-0">
+            <span className="size-2 rounded-full bg-[#b8794e]" />
+            09 koleksi karya
+          </div>
         </header>
 
-        {/* Daftar kategori */}
-        <div className="grid grid-cols-3 gap-x-2 gap-y-7 sm:gap-x-6 sm:gap-y-10 md:gap-x-10 lg:gap-x-14">
+        {/* Kontrol carousel hanya tampil pada HP. */}
+        <div className="mb-5 flex items-center justify-between md:hidden">
+          <p className="text-xs font-medium text-[#667b79]">
+            Geser untuk menjelajah
+          </p>
+
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => moveCarousel(-1)}
+              aria-label="Karya sebelumnya"
+              className="grid size-10 place-items-center rounded-full border border-[#0d747c]/20 bg-white/80 text-[#0d747c] shadow-sm transition active:scale-95"
+            >
+              <ArrowIcon direction="left" />
+            </button>
+            <button
+              type="button"
+              onClick={() => moveCarousel(1)}
+              aria-label="Karya berikutnya"
+              className="grid size-10 place-items-center rounded-full bg-[#0d747c] text-white shadow-sm transition active:scale-95"
+            >
+              <ArrowIcon direction="right" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          ref={carouselRef}
+          className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-7 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-8 sm:px-8 md:mx-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:gap-8"
+        >
           {categories.map((category, index) => (
             <Link
               key={category.id}
               to={category.path}
               aria-label={`Buka halaman ${category.title}`}
-              className="group flex min-w-0 flex-col items-center text-center"
+              className="group w-[78vw] max-w-[300px] shrink-0 snap-center rounded-[2rem] border border-[#315c59]/10 bg-white/75 p-3 shadow-[0_16px_50px_rgba(39,72,70,0.10)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#0d747c]/30 hover:shadow-[0_22px_55px_rgba(39,72,70,0.16)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/25 sm:w-[45vw] md:w-auto md:max-w-none md:snap-none"
             >
-              {/* Preview berbentuk lingkaran */}
-              <div className="relative aspect-square w-full max-w-24 overflow-hidden rounded-full bg-[#ffdb68] shadow-md shadow-stone-900/10 ring-2 ring-transparent transition duration-300 group-hover:-translate-y-2 group-hover:shadow-xl group-hover:ring-amber-400 group-focus-visible:ring-4 group-focus-visible:ring-amber-500 sm:max-w-40 md:max-w-48 lg:max-w-56">
-                <span className="absolute inset-0 flex items-center justify-center px-2 text-[10px] font-medium text-stone-700 sm:text-sm">
-                  Preview karya
-                </span>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] bg-gradient-to-br from-[#d9c09d] via-[#d6b286] to-[#b8794e]">
+                <div className="absolute inset-0 grid place-items-center">
+                  <span className="rounded-full bg-white/55 px-4 py-2 text-xs font-medium text-[#694a37] backdrop-blur-sm">
+                    Preview karya
+                  </span>
+                </div>
 
                 <img
                   src={`${imageBaseUrl}/images/jelajah/${category.image}`}
@@ -94,16 +177,38 @@ function Jelajah() {
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
-                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
+
+                <span className="absolute left-3 top-3 rounded-full bg-[#f7f1e8]/90 px-3 py-1.5 text-[10px] font-semibold tracking-[0.16em] text-[#76533d] shadow-sm backdrop-blur-sm">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
 
-              {/* Nama kategori */}
-              <h2 className="mt-3 min-h-10 text-xs leading-tight font-medium text-stone-900 transition group-hover:text-amber-700 sm:mt-4 sm:text-base md:text-lg">
-                {category.title}
-              </h2>
+              <div className="flex min-h-20 items-center justify-between gap-3 px-2 pb-1 pt-4">
+                <div>
+                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0d747c]">
+                    Karya resin
+                  </p>
+                  <h2 className="text-base font-semibold leading-tight text-[#254846] sm:text-lg">
+                    {category.title}
+                  </h2>
+                </div>
+
+                <span className="grid size-10 shrink-0 place-items-center rounded-full border border-[#0d747c]/15 text-[#0d747c] transition duration-300 group-hover:border-[#0d747c] group-hover:bg-[#0d747c] group-hover:text-white">
+                  <ArrowIcon direction="right" />
+                </span>
+              </div>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-8 hidden items-center gap-4 md:flex">
+          <span className="h-px flex-1 bg-[#315c59]/15" />
+          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7a8d8b]">
+            Kayu · Resin · Laut
+          </span>
+          <span className="h-px flex-1 bg-[#315c59]/15" />
         </div>
       </section>
     </main>
