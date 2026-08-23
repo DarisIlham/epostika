@@ -14,7 +14,7 @@ const artworks = [
     collection: "Tas",
 
     image: {
-      src: imageUrl("tas-a.webp"),
+      src: imageUrl("7.webp"),
       alt: "Tas resin A",
     },
 
@@ -33,7 +33,7 @@ const artworks = [
     collection: "Tas",
 
     image: {
-      src: imageUrl("tas-b.webp"),
+      src: imageUrl("8.webp"),
       alt: "Tas resin B",
     },
 
@@ -52,7 +52,7 @@ const artworks = [
     collection: "Tas",
 
     image: {
-      src: imageUrl("tas-c.webp"),
+      src: imageUrl("9.webp"),
       alt: "Tas resin C",
     },
 

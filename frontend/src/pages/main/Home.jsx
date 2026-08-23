@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
 
-const backgroundImage = `${imageBaseUrl}/images/home/homee.webp`;
+const backgroundImage = `${imageBaseUrl}/images/home/sdad.webp`;
 
 function ArrowIcon() {
   return (
@@ -25,6 +26,8 @@ function ArrowIcon() {
 }
 
 function Home() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <main className="relative min-h-svh overflow-hidden bg-[#102e4e] font-sora text-white">
       <style>{`
@@ -43,6 +46,36 @@ function Home() {
           50% { transform: translateY(-8px); }
         }
 
+        @keyframes home-intro-reveal {
+          from { clip-path: inset(0 100% 0 0); }
+          to { clip-path: inset(0 0 0 0); }
+        }
+
+        @keyframes home-intro-caret-move {
+          from { left: 0; }
+          to { left: calc(100% + 0.025em); }
+        }
+
+        @keyframes home-intro-caret-blink {
+          0%, 100% { border-color: transparent; }
+          50% { border-color: #ffffff; }
+        }
+
+        @keyframes home-intro-open-top {
+          0%, 64% { transform: translateY(0); }
+          100% { transform: translateY(-100%); }
+        }
+
+        @keyframes home-intro-open-bottom {
+          0%, 64% { transform: translateY(0); }
+          100% { transform: translateY(100%); }
+        }
+
+        @keyframes home-intro-copy-out {
+          0%, 61% { opacity: 1; }
+          69%, 100% { opacity: 0; }
+        }
+
         .home-wave-a {
           animation: home-wave-drift-a 9s ease-in-out infinite;
         }
@@ -55,14 +88,100 @@ function Home() {
           animation: home-float 5s ease-in-out infinite;
         }
 
+        .home-intro-panel-top {
+          animation: home-intro-open-top 3s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+          will-change: transform;
+        }
+
+        .home-intro-panel-bottom {
+          animation: home-intro-open-bottom 3s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+          will-change: transform;
+        }
+
+        .home-intro-copy {
+          animation: home-intro-copy-out 3s ease forwards;
+        }
+
+        .home-intro-word {
+          white-space: nowrap;
+          clip-path: inset(0 100% 0 0);
+          animation: home-intro-reveal 1.2s steps(8, end) 0.25s forwards;
+        }
+
+        .home-intro-caret {
+          left: 0;
+          animation:
+            home-intro-caret-move 1.2s steps(8, end) 0.25s forwards,
+            home-intro-caret-blink 0.5s step-end 0.1s 4;
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .home-wave-a,
           .home-wave-b,
           .home-float {
             animation: none;
           }
+
+          .home-intro-panel-top,
+          .home-intro-panel-bottom {
+            animation-duration: 0.01ms;
+            animation-delay: 0.25s;
+          }
+
+          .home-intro-copy {
+            animation: none;
+          }
+
+          .home-intro-word {
+            clip-path: inset(0 0 0 0);
+            animation: none;
+          }
+
+          .home-intro-caret {
+            display: none;
+          }
         }
       `}</style>
+
+      {/* Intro pertama: typing lalu layar hitam terbelah atas dan bawah. */}
+      {showIntro && (
+        <div
+          aria-hidden="true"
+          className="fixed inset-0 z-[100] overflow-hidden"
+        >
+          <div className="home-intro-panel-top absolute inset-x-0 top-0 h-[50.5%] bg-black" />
+          <div
+            className="home-intro-panel-bottom absolute inset-x-0 bottom-0 h-[50.5%] bg-black"
+            onAnimationEnd={(event) => {
+              if (event.target === event.currentTarget) {
+                setShowIntro(false);
+              }
+            }}
+          />
+
+          <div className="home-intro-copy pointer-events-none absolute inset-0 z-10 grid place-items-center px-4">
+            <div className="relative inline-block leading-none">
+              <span
+                className="home-intro-word block bg-[#58afb9] font-sora text-[clamp(3rem,17vw,12rem)] font-extrabold tracking-[0.02em] text-transparent"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(16, 46, 78, 0.12), rgba(16, 46, 78, 0.12)), url("${backgroundImage}")`,
+                  backgroundPosition: "center",
+                  backgroundSize: "100vw 100vh",
+                  backgroundAttachment: "fixed",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  WebkitTextStroke: "1px rgba(255, 255, 255, 0.22)",
+                }}
+              >
+                EPOSTIKA
+              </span>
+
+              <span className="home-intro-caret absolute top-[6%] h-[88%] border-r-[3px] border-white" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Background berasal dari folder public backend. */}
       <img
@@ -112,7 +231,7 @@ function Home() {
 
             <div className="relative">
               <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#fedca1] sm:text-xs">
-                Kayu · Resin · Laut
+                Kayu x Resin
               </p>
 
               <h1 className="font-cronde text-[clamp(3.2rem,12vw,7.5rem)] font-medium leading-[0.84] tracking-[-0.035em] text-white">
@@ -130,8 +249,8 @@ function Home() {
               </div>
 
               <p className="mt-7 max-w-xl text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-                Sebuah perjalanan visual yang mempertemukan tekstur alami,
-                warna laut, dan karya resin dalam satu ruang eksplorasi.
+                Sebuah perjalanan visual yang mempertemukan tekstur alami
+                <br></br> dan karya resin dalam satu ruang eksplorasi.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -146,7 +265,7 @@ function Home() {
                 </Link>
 
                 <p className="max-w-48 text-[10px] font-medium uppercase leading-5 tracking-[0.16em] text-[#a9e5e7]/80 sm:text-xs">
-                  Sembilan koleksi
+                  Delapan koleksi
                   <span className="block text-white/55">satu perjalanan</span>
                 </p>
               </div>
@@ -199,8 +318,8 @@ function Home() {
           <span>Nature</span>
           <span className="size-1 rounded-full bg-[#fedca1]" />
           <span>Craft</span>
-          <span className="size-1 rounded-full bg-[#e85c88]" />
-          <span>Ocean</span>
+          
+        
         </div>
       </div>
     </main>

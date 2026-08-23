@@ -4,9 +4,22 @@ import { Link } from "react-router-dom";
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
 
+const imageUrl = (path, filename) =>
+  `${imageBaseUrl}/images${path}/${filename}`;
+
 const categories = [
-  { id: 1, title: "Lukisan", path: "/artistik1", image: "lukisan.webp" },
-  { id: 2, title: "Tas", path: "/artistik2", image: "tas.webp" },
+  {
+    id: 1,
+    title: "Lukisan",
+    path: "/artistik1",
+    image: "lukisan.webp",
+  },
+  {
+    id: 2,
+    title: "Tas",
+    path: "/artistik2",
+    image: "9.webp",
+  },
   {
     id: 3,
     title: "Lampu Tidur",
@@ -25,19 +38,23 @@ const categories = [
     path: "/artistik5",
     image: "home-decor-serving.webp",
   },
-  { id: 6, title: "Coaster", path: "/artistik6", image: "coaster.webp" },
+  {
+    id: 6,
+    title: "Coaster",
+    path: "/artistik6",
+    image: "coaster.webp",
+  },
   {
     id: 7,
     title: "Jam Meja",
     path: "/artistik7",
     image: "jam-meja.webp",
   },
-  { id: 8, title: "Cermin", path: "/artistik8", image: "cermin.webp" },
   {
-    id: 9,
-    title: "Lukisan Kecil",
-    path: "/artistik9",
-    image: "lukisan-kecil.webp",
+    id: 8,
+    title: "Cermin",
+    path: "/artistik8",
+    image: "cermin.webp",
   },
 ];
 
@@ -76,13 +93,14 @@ function Jelajah() {
 
   return (
     <main className="relative min-h-svh overflow-hidden bg-[#f5f0e7] font-sora text-[#173b3a]">
-      {/* Elemen dekoratif bertema laut dan kayu. */}
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 overflow-hidden"
       >
         <div className="absolute -right-36 -top-28 size-[25rem] rounded-full border-[4.5rem] border-[#168494]/10 sm:size-[34rem]" />
+
         <div className="absolute -left-32 top-[42%] size-80 rounded-full bg-[#b8794e]/10 blur-3xl sm:size-[30rem]" />
+
         <div className="absolute -bottom-48 right-[8%] size-[30rem] rounded-full bg-[#168494]/10 blur-3xl" />
 
         <svg
@@ -114,18 +132,17 @@ function Jelajah() {
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#536967] sm:text-base">
-              Temukan sembilan karya resin yang mempertemukan hangatnya kayu
-              dengan warna dan ketenangan laut.
+              Temukan delapan karya yang mempertemukan hangatnya kayu
+              dengan warna dan keindahan resin.
             </p>
           </div>
 
           <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#b8794e]/25 bg-white/65 px-4 py-2 text-xs font-medium text-[#76533d] shadow-sm backdrop-blur-sm lg:mt-0">
             <span className="size-2 rounded-full bg-[#b8794e]" />
-            09 koleksi karya
+            {String(categories.length).padStart(2, "0")} koleksi karya
           </div>
         </header>
 
-        {/* Kontrol carousel hanya tampil pada HP. */}
         <div className="mb-5 flex items-center justify-between md:hidden">
           <p className="text-xs font-medium text-[#667b79]">
             Geser untuk menjelajah
@@ -140,6 +157,7 @@ function Jelajah() {
             >
               <ArrowIcon direction="left" />
             </button>
+
             <button
               type="button"
               onClick={() => moveCarousel(1)}
@@ -170,11 +188,16 @@ function Jelajah() {
                 </div>
 
                 <img
-                  src={`${imageBaseUrl}/images/jelajah/${category.image}`}
+                  src={imageUrl(category.path, category.image)}
                   alt={`Preview karya ${category.title}`}
                   loading={index < 3 ? "eager" : "lazy"}
                   decoding="async"
                   onError={(event) => {
+                    console.error(
+                      "Gagal memuat gambar:",
+                      imageUrl(category.path, category.image)
+                    );
+
                     event.currentTarget.style.display = "none";
                   }}
                   className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
@@ -190,6 +213,7 @@ function Jelajah() {
                   <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0d747c]">
                     Karya resin
                   </p>
+
                   <h2 className="text-base font-semibold leading-tight text-[#254846] sm:text-lg">
                     {category.title}
                   </h2>
@@ -205,9 +229,11 @@ function Jelajah() {
 
         <div className="mt-8 hidden items-center gap-4 md:flex">
           <span className="h-px flex-1 bg-[#315c59]/15" />
+
           <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7a8d8b]">
-            Kayu · Resin · Laut
+            Kayu x Resin
           </span>
+
           <span className="h-px flex-1 bg-[#315c59]/15" />
         </div>
       </section>

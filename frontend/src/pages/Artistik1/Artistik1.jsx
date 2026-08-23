@@ -14,7 +14,7 @@ const artworks = [
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("lukisan-a.webp"),
+      src: imageUrl("7.webp"),
       alt: "Lukisan resin A",
     },
 
@@ -33,7 +33,7 @@ const artworks = [
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("lukisan-b.webp"),
+      src: imageUrl("8.webp"),
       alt: "Lukisan resin B",
     },
 
@@ -52,7 +52,7 @@ const artworks = [
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("lukisan-c.webp"),
+      src: imageUrl("9.webp"),
       alt: "Lukisan resin C",
     },
 
