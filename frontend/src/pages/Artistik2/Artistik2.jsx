@@ -10,57 +10,76 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik2/${filename}`;
 const artworks = [
   {
     id: "tas-a",
-    title: "Tas A",
+    title: "Eclipse",
     collection: "Tas",
 
     image: {
-      src: imageUrl("7.webp"),
+      src: imageUrl("Eclipse.webp"),
       alt: "Tas resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Cahaya dan gelap tak pernah benar-benar berpisah; seperti gerhana, cahaya hanya bersembunyi di balik bayang, bukan lenyap.",
 
     description:
-      "Tas resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Manusia pun demikian, di balik yang tampak, tersimpan singularitas, ruang terdalam segala riuh terhisap. Gelap bukan akhir dari cahaya, melainkan jeda tempat ia menetap, sebelum kembali menyala dalam senyap.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "tas-b",
-    title: "Tas B",
+    title: "Kelana",
     collection: "Tas",
 
     image: {
-      src: imageUrl("8.webp"),
+      src: imageUrl("Kelana.webp"),
       alt: "Tas resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Hidup selalu menemukan jalannya sendiri tanpa pernah benar-benar kehilangan jejak dari mana ia bermula.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Pergi bukan berarti melupakan asal dan berubah bukan berarti kehilangan diri. Sebab sejauh apa pun perjalanan membawa kita, selalu ada sesuatu yang tetap mengalir dari tempat kita pernah berasal.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "tas-c",
-    title: "Tas C",
+    title: "Asmara",
     collection: "Tas",
 
     image: {
-      src: imageUrl("9.webp"),
+      src: imageUrl("Asmara.webp"),
       alt: "Tas resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Ada perasaan yang tidak datang dengan gaduh. Ia tumbuh perlahan, melewati waktu, lalu menetap tanpa banyak suara.",
 
     description:
-      "Tas ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Segala yang pernah dilalui tidak menjadi sesuatu yang harus dilupakan, melainkan bagian yang membuatnya semakin dalam. Barangkali kasih memang demikian, tumbuh tanpa tergesa, tetapi meninggalkan jejak yang sulit hilang.",
+
+    instagramUrl: "https://www.instagram.com/",
+    commerceUrl: "",
+  },
+  {
+    id: "tas-c",
+    title: "Wening",
+    collection: "Tas",
+
+    image: {
+      src: imageUrl("Wening_.webp"),
+      alt: "Tas resin C",
+    },
+
+    descriptionLead:
+      "Tidak semua kepingan harus serupa untuk menjadi utuh. Ada yang datang membawa bentuknya sendiri, lalu menemukan tempat di antara yang lainnya.",
+
+    description:
+      "Ketika perbedaan tidak lagi dipaksa untuk serupa, sesuatu yang lebih indah tumbuh di antaranya. Sebab keutuhan bukan tentang menjadi satu, melainkan tentang tahu bagaimana saling melengkapi.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",

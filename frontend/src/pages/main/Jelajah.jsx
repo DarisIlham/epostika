@@ -12,13 +12,13 @@ const categories = [
     id: 1,
     title: "Lukisan",
     path: "/artistik1",
-    image: "lukisan.webp",
+    image: "10.webp",
   },
   {
     id: 2,
     title: "Tas",
     path: "/artistik2",
-    image: "9.webp",
+    image: "Eclipse.webp",
   },
   {
     id: 3,
@@ -30,31 +30,31 @@ const categories = [
     id: 4,
     title: "Home Decor Oval",
     path: "/artistik4",
-    image: "home-decor-oval.webp",
+    image: "2.webp",
   },
   {
     id: 5,
     title: "Home Decor Serving",
     path: "/artistik5",
-    image: "home-decor-serving.webp",
+    image: "fluke.webp",
   },
   {
     id: 6,
     title: "Coaster",
     path: "/artistik6",
-    image: "coaster.webp",
+    image: "coaster1.webp",
   },
   {
     id: 7,
     title: "Jam Meja",
     path: "/artistik7",
-    image: "jam-meja.webp",
+    image: "Hermes_.webp",
   },
   {
     id: 8,
     title: "Cermin",
     path: "/artistik8",
-    image: "cermin.webp",
+    image: "Rinengga.webp",
   },
 ];
 
@@ -181,11 +181,11 @@ function Jelajah() {
               className="group w-[78vw] max-w-[300px] shrink-0 snap-center rounded-[2rem] border border-[#315c59]/10 bg-white/75 p-3 shadow-[0_16px_50px_rgba(39,72,70,0.10)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#0d747c]/30 hover:shadow-[0_22px_55px_rgba(39,72,70,0.16)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/25 sm:w-[45vw] md:w-auto md:max-w-none md:snap-none"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] bg-gradient-to-br from-[#d9c09d] via-[#d6b286] to-[#b8794e]">
-                <div className="absolute inset-0 grid place-items-center">
+                {/* <div className="absolute inset-0 grid place-items-center">
                   <span className="rounded-full bg-white/55 px-4 py-2 text-xs font-medium text-[#694a37] backdrop-blur-sm">
                     Preview karya
                   </span>
-                </div>
+                </div> */}
 
                 <img
                   src={imageUrl(category.path, category.image)}

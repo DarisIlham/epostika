@@ -10,57 +10,76 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik4/${filename}`;
 const artworks = [
   {
     id: "home decor oval-a",
-    title: "Home Decor Oval A",
+    title: "Lelana",
     collection: "Home Decor Oval",
 
     image: {
-      src: imageUrl("home decor oval-a.webp"),
+      src: imageUrl("2.webp"),
       alt: "Home Decor Oval resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Tiga fragmen pantai menangkap perjalanan dalam bentuk yang sederhana; perahu yang berlayar, ombak yang datang dan pergi, serta daratan tempat segala perjalanan bermula dan berakhir.",
 
     description:
-      "Home Decor Oval resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Ia menjadi pengingat bahwa hidup bukan semata tentang mencapai tujuan, melainkan tentang meresapi setiap riak yang ditemui sepanjang perjalanan.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "home decor oval-b",
-    title: "Home Decor Oval B",
+    title: "Jati Wengi",
     collection: "Home Decor Oval",
 
     image: {
-      src: imageUrl("home decor oval-b.webp"),
+      src: imageUrl("1.webp"),
       alt: "Home Decor Oval resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Di atas permukaan gelap, serpihan-serpihan tembaga berkilau tercecer di langit malam. Ia adalah gambaran tentang malam, gemerlap.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Sebab bahkan dalam sesuatu yang paling pekat, selalu ada cahaya kecil yang mencari jalan untuk terlihat.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "home decor oval-c",
-    title: "Home Decor Oval C",
+    title: "Nila Jala",
     collection: "Home Decor Oval",
 
     image: {
-      src: imageUrl("home decor oval-c.webp"),
+      src: imageUrl("3.webp"),
       alt: "Home Decor Oval resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Laut biru terbentang seperti ruang tanpa batas, tempat ombak datang dan pergi membawa serpihan perjalanan.",
 
     description:
-      "Home Decor Oval ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Sebuah perahu kecil terdiam di antara buih, seolah menunggu seseorang yang pernah berlayar menuju tepian. Pasir, kerang, dan riak air menjadi saksi bahwa setiap perjalanan selalu meninggalkan sesuatu, meski tak selalu dapat dibawa pulang.",
+
+    instagramUrl: "https://www.instagram.com/",
+    commerceUrl: "",
+  },
+  {
+    id: "home decor oval-c",
+    title: "Segara Rasa",
+    collection: "Home Decor Oval",
+
+    image: {
+      src: imageUrl("Segara Rasa_.webp"),
+      alt: "Home Decor Oval resin C",
+    },
+
+    descriptionLead:
+      "Di tepian samudra, batu-batu kecil berkumpul seperti kenangan yang perlahan menemukan tempatnya. Perahu yang terbaring di antara riuh ombak seakan telah selesai menempuh perjalanan panjang.",
+
+    description:
+      "Laut tetap bergerak tanpa mengenal akhir, menyimpan segala rasa yang pernah hanyut dan mengembalikannya dalam bentuk yang berbeda.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",

@@ -10,57 +10,76 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik1/${filename}`;
 const artworks = [
   {
     id: "lukisan-a",
-    title: "Lukisan A",
+    title: "Nirwana",
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("7.webp"),
+      src: imageUrl("10.webp"),
       alt: "Lukisan resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Laut selalu bergerak dan ombak menemukan sebuah rumah. Birunya menetap, pasirnya diam, dan kerang-kerang kecil menjadi saksi bahwa sesuatu yang seharusnya berlalu tetap dapat bernaung.",
 
     description:
-      "Lukisan resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Resin mengabadikan apa yang tak mampu dilakukan waktu. Maka ketika laut tak lagi berada di hadapan mata, dalam sebuah bingkailah ia berada, menunggu seseorang untuk kembali mengingatnya.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "lukisan-b",
-    title: "Lukisan B",
+    title: "Marga Tira",
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("8.webp"),
+      src: imageUrl("11.webp"),
       alt: "Lukisan resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Seseorang pernah berjalan di sini, meninggalkan dua lengkung sederhana yang perlahan akan diratakan waktu.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Tetapi sebelum ombak datang menghapusnya, jejak itu sempat menjadi bukti bahwa pernah ada seseorang yang berjalan, berhenti, dan mungkin mencari sesuatu di sepanjang tepian. Sebab setiap perjalanan pada akhirnya akan meninggalkan jejak, meski tidak semua jejak ditakdirkan untuk menetap.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "lukisan-c",
-    title: "Lukisan C",
+    title: "Tamas Tarangga",
     collection: "Lukisan",
 
     image: {
-      src: imageUrl("9.webp"),
+      src: imageUrl("12.webp"),
       alt: "Lukisan resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Ombak laut tetap datang, memecah dirinya sendiri berkali-kali di hadapan pantai. Tidak pernah benar-benar selesai, tidak pernah benar-benar menyerah.",
 
     description:
-      "Lukisan ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Mungkin begitulah ketabahan bekerja, bukan tentang tidak pernah karam, melainkan tentang selalu menemukan alasan untuk kembali.",
+
+    instagramUrl: "https://www.instagram.com/",
+    commerceUrl: "",
+  },
+  {
+    id: "lukisan-d",
+    title: "I Wish",
+    collection: "Lukisan",
+
+    image: {
+      src: imageUrl("13.webp"),
+      alt: "Lukisan resin C",
+    },
+
+    descriptionLead:
+      "Sebuah doa dilarung dalam botol dan dilepas ke tengah laut, membawa harapan yang tak sanggup digenggam sendiri.",
+
+    description:
+      "Barangkali, harapan adalah laku paling sunyi manusia: menanam doa di antara riuh gelombang, lalu membiarkannya berlayar menuju takdir, sembari percaya bahwa sesuatu yang kita semogakan akan menemukan jalannya sendiri.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",

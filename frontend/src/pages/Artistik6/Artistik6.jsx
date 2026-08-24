@@ -10,57 +10,57 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik6/${filename}`;
 const artworks = [
   {
     id: "coaster-a",
-    title: "Coaster A",
+    title: "Thalassa",
     collection: "Coaster",
 
     image: {
-      src: imageUrl("coaster-a.webp"),
+      src: imageUrl("coaster1.webp"),
       alt: "Coaster resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Thalassa, dewi laut Yunani, hadir lewat motif biru bergelombang yang melambangkan kedamaian dan kekuatan yang tenang.",
 
     description:
-      "Coaster resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "coaster-b",
-    title: "Coaster B",
+    title: "Thalassa",
     collection: "Coaster",
 
     image: {
-      src: imageUrl("coaster-b.webp"),
+      src: imageUrl("coaster2.webp"),
       alt: "Coaster resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Thalassa, dewi laut Yunani, hadir lewat motif biru bergelombang yang melambangkan kedamaian dan kekuatan yang tenang.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "coaster-c",
-    title: "Coaster C",
+    title: "Thalassa",
     collection: "Coaster",
 
     image: {
-      src: imageUrl("coaster-c.webp"),
+      src: imageUrl("coaster3.webp"),
       alt: "Coaster resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Thalassa, dewi laut Yunani, hadir lewat motif biru bergelombang yang melambangkan kedamaian dan kekuatan yang tenang.",
 
     description:
-      "Coaster ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",

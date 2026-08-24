@@ -25,10 +25,8 @@ function ArtworkImage({ src, alt, priority = false, className = "" }) {
       {/* Placeholder tetap terlihat ketika gambar belum tersedia. */}
       <div className="absolute inset-0 grid place-items-center">
         <div className="text-center">
-          <span className="mx-auto mb-3 block size-9 rounded-full border border-white/50 bg-white/20" />
-          <span className="rounded-full bg-[#f7f1e8]/75 px-4 py-2 font-sora text-xs font-medium text-[#694a37] backdrop-blur-sm sm:text-sm">
-            Foto karya
-          </span>
+          
+          
         </div>
       </div>
 

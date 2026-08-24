@@ -10,61 +10,61 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik5/${filename}`;
 const artworks = [
   {
     id: "home decor serving-a",
-    title: "Home Decor Serving A",
+    title: "Fluke",
     collection: "Home Decor Serving",
 
     image: {
-      src: imageUrl("home decor serving-a.webp"),
+      src: imageUrl("Fluke.webp"),
       alt: "Home Decor Serving resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Tiga ekor paus menjadi gambaran kehidupan seperti mengarungi samudra yang besar dan bebas.",
 
     description:
-      "Home Decor Serving resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Riak ombak yang melekat pada tubuhnya menjadi jejak perjalanan, bahwa setiap makhluk memiliki arusnya sendiri.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "home decor serving-b",
-    title: "Home Decor Serving B",
+    title: "Saujana",
     collection: "Home Decor Serving",
 
     image: {
-      src: imageUrl("home decor serving-b.webp"),
+      src: imageUrl("Saujana.webp"),
       alt: "Home Decor Serving resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Hijau yang membentang dan bukit yang bersusun menjadi sepotong wajah Desa Wisata Branjang,",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "tempat alam dan kehidupan tumbuh beriringan, menyimpan teduh yang membuat waktu seakan berjalan lebih lirih.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
-  {
-    id: "home decor serving-c",
-    title: "Home Decor Serving C",
-    collection: "Home Decor Serving",
+  // {
+  //   id: "home decor serving-c",
+  //   title: "Home Decor Serving C",
+  //   collection: "Home Decor Serving",
 
-    image: {
-      src: imageUrl("home decor serving-c.webp"),
-      alt: "Home Decor Serving resin C",
-    },
+  //   image: {
+  //     src: imageUrl("home decor serving-c.webp"),
+  //     alt: "Home Decor Serving resin C",
+  //   },
 
-    descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+  //   descriptionLead:
+  //     "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
 
-    description:
-      "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+  //   description:
+  //     "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
 
-    instagramUrl: "https://www.instagram.com/",
-    commerceUrl: "",
-  },
+  //   instagramUrl: "https://www.instagram.com/",
+  //   commerceUrl: "",
+  // },
 ];
 
 function Artistik5() {

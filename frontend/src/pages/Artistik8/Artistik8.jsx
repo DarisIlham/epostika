@@ -10,57 +10,57 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik8/${filename}`;
 const artworks = [
   {
     id: "cermin-a",
-    title: "Cermin A",
+    title: "Rinengga",
     collection: "Cermin",
 
     image: {
-      src: imageUrl("cermin-a.webp"),
+      src: imageUrl("Rinengga.webp"),
       alt: "Cermin resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Ada sesuatu yang indah dari kepingan yang tidak sempurna ketika dipertemukan dengan cara yang tepat.",
 
     description:
-      "Cermin resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Barangkali keindahan memang tidak selalu lahir dari sesuatu yang sempurna sejak awal. Kadang, ia tumbuh dari apa-apa yang pernah tercerai dan kemudian dirangkai kembali dengan kehati-hatian.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "cermin-b",
-    title: "Cermin B",
+    title: "Waskita",
     collection: "Cermin",
 
     image: {
-      src: imageUrl("cermin-b.webp"),
+      src: imageUrl("Waskita.webp"),
       alt: "Cermin resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Yang tampak di permukaan tidak selalu menjadi seluruh cerita. Ada pantulan yang mengembalikan wajah, tetapi ada pula kedalaman yang mengajak mata melihat lebih jauh.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Semakin lama dipandang, semakin banyak hal yang perlahan terbaca. Ada kalanya kita perlu diam agar sesuatu berkenan menampakkan maknanya.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "cermin-c",
-    title: "Cermin C",
+    title: "Rupa Laras",
     collection: "Cermin",
 
     image: {
-      src: imageUrl("cermin-c.webp"),
+      src: imageUrl("Rupa Laras.webp"),
       alt: "Cermin resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Ada pertemuan yang tidak datang untuk saling menenggelamkan, melainkan untuk membuat satu sama lain semakin terlihat.",
 
     description:
-      "Cermin ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Ia seperti senja yang tidak pernah benar-benar memilih antara siang dan malam, melainkan sebuah peralihan yang justru menemukan keindahannya sendiri. Tidak semua yang berbeda harus dipertentangkan. Terkadang, dalam pertemuan itulah cahaya menemukan bentuknya.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",

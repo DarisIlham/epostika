@@ -10,57 +10,76 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik7/${filename}`;
 const artworks = [
   {
     id: "jam meja-a",
-    title: "Jam Meja A",
+    title: "Hermes",
     collection: "Jam Meja",
 
     image: {
-      src: imageUrl("jam meja-a.webp"),
+      src: imageUrl("Hermes_.webp"),
       alt: "Jam Meja resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Hermes, dewa utusan dan pelindung perjalanan, digambarkan lewat cakram putih dengan guratan biru menyala yang melambangkan kecepatan lintasan langit, dipadu semburat emas sebagai jejak cahayanya.",
 
     description:
-      "Jam Meja resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Setiap detak jam ini seolah membawa cerita tentang petualangan dan kebijaksanaan dalam perjalanan hidup.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "jam meja-b",
-    title: "Jam Meja B",
+    title: "Athena",
     collection: "Jam Meja",
 
     image: {
-      src: imageUrl("jam meja-b.webp"),
+      src: imageUrl("Athena.webp"),
       alt: "Jam Meja resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Sebagai dewi perang pelindung kota Athena, ia tidak hanya dikenal sebagai pejuang, melainkan juga pencipta seni, kerajinan, dan keteraturan.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      " Batu-batu kristal di tengah jam menggambarkan pecahan Aegis, perisai legendarisnya, menjadikan karya ini simbol hikmat yang memandu manusia menjalani hari demi hari dengan kebijaksanaan.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
   },
   {
     id: "jam meja-c",
-    title: "Jam Meja C",
+    title: "Kalendra",
     collection: "Jam Meja",
 
     image: {
-      src: imageUrl("jam meja-c.webp"),
+      src: imageUrl("Kalendra.webp"),
       alt: "Jam Meja resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Waktu mengalir di antara pasang dan surut kehidupan.",
 
     description:
-      "Jam Meja ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Perjalanan yang tak pernah menetap, sementara detik yang berputar mengajarkan bahwa segala yang datang akan pergi. Meninggalkan denting yang masih bergema dalam masa.",
+
+    instagramUrl: "https://www.instagram.com/",
+    commerceUrl: "",
+  },
+  {
+    id: "jam meja-c",
+    title: "Kalantara",
+    collection: "Jam Meja",
+
+    image: {
+      src: imageUrl("Kalantara.webp"),
+      alt: "Jam Meja resin C",
+    },
+
+    descriptionLead:
+      "Waktu mengalir seperti ombak–datang, surut, lalu meninggalkan jejak yang tak pernah sama.",
+
+    description:
+      "Setiap detik adalah perjalanan yang tak dapat ditahan, hanya dapat dirasakan sebelum menjelma kenangan.",
 
     instagramUrl: "https://www.instagram.com/",
     commerceUrl: "",
@@ -141,7 +160,7 @@ function Artistik7() {
           }`}
         >
           <h1 className="relative z-10 font-cronde text-3xl font-medium text-[#254846] sm:text-4xl md:text-5xl">
-            Jam Meja
+            Jam
           </h1>
         </header>
 
