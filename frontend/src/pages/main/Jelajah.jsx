@@ -36,7 +36,7 @@ const categories = [
     id: 5,
     title: "Home Decor Serving",
     path: "/artistik5",
-    image: "fluke.webp",
+    image: "Fluke.webp",
   },
   {
     id: 6,
