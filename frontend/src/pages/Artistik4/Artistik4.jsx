@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Ia menjadi pengingat bahwa hidup bukan semata tentang mencapai tujuan, melainkan tentang meresapi setiap riak yang ditemui sepanjang perjalanan.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       "Sebab bahkan dalam sesuatu yang paling pekat, selalu ada cahaya kecil yang mencari jalan untuk terlihat.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,17 +62,17 @@ const artworks = [
     description:
       "Sebuah perahu kecil terdiam di antara buih, seolah menunggu seseorang yang pernah berlayar menuju tepian. Pasir, kerang, dan riak air menjadi saksi bahwa setiap perjalanan selalu meninggalkan sesuatu, meski tak selalu dapat dibawa pulang.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
-    id: "home decor oval-c",
+    id: "home decor oval-d",
     title: "Segara Rasa",
     collection: "Home Decor Oval",
 
     image: {
       src: imageUrl("Segara Rasa_.webp"),
-      alt: "Home Decor Oval resin C",
+      alt: "Home Decor Oval resin D",
     },
 
     descriptionLead:
@@ -81,7 +81,7 @@ const artworks = [
     description:
       "Laut tetap bergerak tanpa mengenal akhir, menyimpan segala rasa yang pernah hanyut dan mengembalikannya dalam bentuk yang berbeda.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];

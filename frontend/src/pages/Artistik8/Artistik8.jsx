@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Barangkali keindahan memang tidak selalu lahir dari sesuatu yang sempurna sejak awal. Kadang, ia tumbuh dari apa-apa yang pernah tercerai dan kemudian dirangkai kembali dengan kehati-hatian.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       "Semakin lama dipandang, semakin banyak hal yang perlahan terbaca. Ada kalanya kita perlu diam agar sesuatu berkenan menampakkan maknanya.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,7 +62,7 @@ const artworks = [
     description:
       "Ia seperti senja yang tidak pernah benar-benar memilih antara siang dan malam, melainkan sebuah peralihan yang justru menemukan keindahannya sendiri. Tidak semua yang berbeda harus dipertentangkan. Terkadang, dalam pertemuan itulah cahaya menemukan bentuknya.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];

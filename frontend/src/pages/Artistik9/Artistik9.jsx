@@ -9,60 +9,136 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik9/${filename}`;
 
 const artworks = [
   {
-    id: "lukisan kecil-a",
-    title: "Lukisan Kecil A",
-    collection: "Lukisan Kecil",
+    id: "aksesoris-a",
+    title: "Jagad Bhumi",
+    collection: "Aksesoris",
 
     image: {
-      src: imageUrl("lukisan kecil-a.webp"),
-      alt: "Lukisan Kecil resin A",
+      src: imageUrl("Jagad Bhumi.webp"),
+      alt: "Aksesoris resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Pertemuan antara biru laut dan warna tanah, seperti serpihan kecil dari semesta yang berpijak pada bumi.",
 
     description:
-      "Lukisan Kecil resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "Ia membawa gambaran tentang alam yang luas, tetapi dapat diringkas dalam satu ruang kecil untuk menemani ke mana pun langkah pergi.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
-    id: "lukisan kecil-b",
-    title: "Lukisan Kecil B",
-    collection: "Lukisan Kecil",
+    id: "aksesoris-b",
+    title: "Ranu",
+    collection: "Aksesoris",
 
     image: {
-      src: imageUrl("lukisan kecil-b.webp"),
-      alt: "Lukisan Kecil resin B",
+      src: imageUrl("Ranu.webp"),
+      alt: "Aksesoris resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Seperti tepian yang mempertemukan pasir dan air, Ranj menyimpan jejak kecil dari perjalanan yang pernah singgah.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Warna, pasir, dan cangkang berpadu menjadi pengingat bahwa sesuatu yang sederhana pun dapat menyimpan cerita, tentang tempat yang pernah didatangi, suasana yang pernah dirasakan, dan kenangan yang ingin dibawa pulang.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
-    id: "lukisan kecil-c",
-    title: "Lukisan Kecil C",
-    collection: "Lukisan Kecil",
+    id: "aksesoris-c",
+    title: "Rimba",
+    collection: "Aksesoris",
 
     image: {
-      src: imageUrl("lukisan kecil-c.webp"),
-      alt: "Lukisan Kecil resin C",
+      src: imageUrl("Rimba.webp"),
+      alt: "Aksesoris resin C",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Potongan-potongan kayu dengan jejak lingkar usia yang bertemu dalam satu bentuk, seperti rimba yang tumbuh liar tanpa pernah seragam.",
 
     description:
-      "Lukisan Kecil ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+      "Setiap serat membawa waktunya sendiri, menjadikan ketidakteraturan sebagai bagian dari keindahan.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "aksesoris-d",
+    title: "Loka Asmara",
+    collection: "Aksesoris",
+
+    image: {
+      src: imageUrl("Loka Asmara.webp"),
+      alt: "Aksesoris resin D",
+    },
+
+    descriptionLead:
+      "Sebuah dunia kecil yang dibangun dari rasa: kasih, rindu, dan kenangan yang enggan selesai.",
+
+    description:
+      " Di antara pasir, buih, dan cangkang, ada sesuatu yang sederhana namun cukup untuk membuat sebuah perasaan menemukan tempat tinggal.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "aksesoris-e",
+    title: "Luruh Meraki",
+    collection: "Aksesoris",
+
+    image: {
+      src: imageUrl("Luruh Meraki.webp"),
+      alt: "Aksesoris resin E",
+    },
+
+    descriptionLead:
+      "Tentang sesuatu yang dilepaskan dengan segenap hati, lalu dibiarkan menemukan bentuk barunya sendiri.",
+
+    description:
+      "Sebab tidak semua yang luruh berarti hilang; beberapa meninggalkan jejak yang tetap hidup dalam sesuatu yang lain.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "aksesoris-f",
+    title: "Bongkah Wana",
+    collection: "Aksesoris",
+
+    image: {
+      src: imageUrl("Bongkah Wana.webp"),
+      alt: "Aksesoris resin F",
+    },
+
+    descriptionLead:
+      "Serpihan kayu yang membawa ingatan tentang rimba tempat ia pernah tumbuh.",
+
+    description:
+      "Dari sesuatu yang dahulu menjadi bagian dari hutan, ia menemukan kehidupan kedua sebagai benda yang dapat dibawa pulang, sepotong alam yang berpindah rupa tanpa kehilangan asalnya.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "aksesoris-g",
+    title: "Piaggio",
+    collection: "Aksesoris",
+
+    image: {
+      src: imageUrl("Piaggio_.webp"),
+      alt: "Aksesoris resin G",
+    },
+
+    descriptionLead:
+      "Sebuah perjalanan yang pernah bergerak, kini menetap sebagai jejak yang dapat dikenang.",
+
+    description:
+      "Material yang tersisa membawa cerita tentang jalan, waktu, dan perjalanan yang mungkin telah berhenti, tetapi tidak sepenuhnya berakhir.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];
@@ -141,7 +217,7 @@ function Artistik9() {
           }`}
         >
           <h1 className="relative z-10 font-cronde text-3xl font-medium text-[#254846] sm:text-4xl md:text-5xl">
-            Lukisan Kecil
+            Aksesoris
           </h1>
         </header>
 

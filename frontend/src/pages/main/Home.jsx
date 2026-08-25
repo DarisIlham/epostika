@@ -265,7 +265,7 @@ function Home() {
                 </Link>
 
                 <p className="max-w-48 text-[10px] font-medium uppercase leading-5 tracking-[0.16em] text-[#a9e5e7]/80 sm:text-xs">
-                  Delapan koleksi
+                  Sembilan koleksi
                   <span className="block text-white/55">satu perjalanan</span>
                 </p>
               </div>

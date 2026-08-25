@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,7 +62,7 @@ const artworks = [
     description:
       "Setiap cangkir yang diletakkan di atasnya menjadi momen hening, ruang singkat untuk berhenti sejenak.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];

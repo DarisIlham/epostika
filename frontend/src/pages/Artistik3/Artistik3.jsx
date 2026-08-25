@@ -10,61 +10,43 @@ const imageUrl = (filename) => `${imageBaseUrl}/images/artistik3/${filename}`;
 const artworks = [
   {
     id: "lampu tidur-a",
-    title: "Lampu Tidur A",
+    title: "Bergolak",
     collection: "Lampu Tidur",
 
     image: {
-      src: imageUrl("lampu tidur-a.webp"),
+      src: imageUrl("Bergolak.webp"),
       alt: "Lampu Tidur resin A",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Di balik riak yang tak pernah diam,",
 
     description:
-      "Lampu Tidur resin ini memadukan warna, tekstur, dan bentuk organik untuk menghasilkan karakter visual yang unik.",
+      "seekor ikan berenang dalam buih yang berkejaran, seperti hidup yang selalu bergerak, bergejolak, dan menyimpan sesuatu di balik permukaannya.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
     id: "lampu tidur-b",
-    title: "Lampu Tidur B",
+    title: "Binar Garbha",
     collection: "Lampu Tidur",
 
     image: {
-      src: imageUrl("lampu tidur-b.webp"),
+      src: imageUrl("Binar.webp"),
       alt: "Lampu Tidur resin B",
     },
 
     descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+      "Di antara kayu dan bening yang membeku, tersimpan sepotong kabar tentang kehidupan yang mungkin sedang bermula.",
 
     description:
-      "Karya ini mengeksplorasi perpaduan material resin dengan warna dan komposisi yang dibuat secara manual.",
+      "Sebuah garis kecil yang membawa harap, dan kemungkinan. Tentang sesuatu yang belum lahir, namun telah lebih dulu memenuhi hati.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
-  {
-    id: "lampu tidur-c",
-    title: "Lampu Tidur C",
-    collection: "Lampu Tidur",
 
-    image: {
-      src: imageUrl("lampu tidur-c.webp"),
-      alt: "Lampu Tidur resin C",
-    },
-
-    descriptionLead:
-      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
-
-    description:
-      "Lampu Tidur ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
-
-    instagramUrl: "https://www.instagram.com/",
-    commerceUrl: "",
-  },
 ];
 
 function Artistik3() {

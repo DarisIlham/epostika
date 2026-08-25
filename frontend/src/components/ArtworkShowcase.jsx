@@ -140,7 +140,7 @@ function ArtworkShowcase({
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-[#0d747c]/20 bg-white/75 px-4 py-2.5 text-xs font-semibold text-[#0d747c] transition hover:border-[#0d747c] hover:bg-[#0d747c] hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
                 >
-                  Instagram
+                  Sigur.id
                   <ArrowIcon />
                 </a>
               )}

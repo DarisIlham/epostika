@@ -24,7 +24,7 @@ const categories = [
     id: 3,
     title: "Lampu Tidur",
     path: "/artistik3",
-    image: "lampu-tidur.webp",
+    image: "Bergolak.webp",
   },
   {
     id: 4,
@@ -55,6 +55,12 @@ const categories = [
     title: "Cermin",
     path: "/artistik8",
     image: "Rinengga.webp",
+  },
+  {
+    id: 8,
+    title: "Aksesoris",
+    path: "/artistik9",
+    image: "Jagad Bhumi.webp",
   },
 ];
 
@@ -132,7 +138,7 @@ function Jelajah() {
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-[#536967] sm:text-base">
-              Temukan delapan karya yang mempertemukan hangatnya kayu
+              Temukan sembilan karya yang mempertemukan hangatnya kayu
               dengan warna dan keindahan resin.
             </p>
           </div>
@@ -231,7 +237,7 @@ function Jelajah() {
           <span className="h-px flex-1 bg-[#315c59]/15" />
 
           <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7a8d8b]">
-            Kayu x Resin
+            Nature • Craft
           </span>
 
           <span className="h-px flex-1 bg-[#315c59]/15" />

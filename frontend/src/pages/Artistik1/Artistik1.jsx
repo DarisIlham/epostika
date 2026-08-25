@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Resin mengabadikan apa yang tak mampu dilakukan waktu. Maka ketika laut tak lagi berada di hadapan mata, dalam sebuah bingkailah ia berada, menunggu seseorang untuk kembali mengingatnya.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       "Tetapi sebelum ombak datang menghapusnya, jejak itu sempat menjadi bukti bahwa pernah ada seseorang yang berjalan, berhenti, dan mungkin mencari sesuatu di sepanjang tepian. Sebab setiap perjalanan pada akhirnya akan meninggalkan jejak, meski tidak semua jejak ditakdirkan untuk menetap.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,7 +62,7 @@ const artworks = [
     description:
       "Mungkin begitulah ketabahan bekerja, bukan tentang tidak pernah karam, melainkan tentang selalu menemukan alasan untuk kembali.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -81,7 +81,7 @@ const artworks = [
     description:
       "Barangkali, harapan adalah laku paling sunyi manusia: menanam doa di antara riuh gelombang, lalu membiarkannya berlayar menuju takdir, sembari percaya bahwa sesuatu yang kita semogakan akan menemukan jalannya sendiri.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];

@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Riak ombak yang melekat pada tubuhnya menjadi jejak perjalanan, bahwa setiap makhluk memiliki arusnya sendiri.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,28 +43,85 @@ const artworks = [
     description:
       "tempat alam dan kehidupan tumbuh beriringan, menyimpan teduh yang membuat waktu seakan berjalan lebih lirih.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
-  // {
-  //   id: "home decor serving-c",
-  //   title: "Home Decor Serving C",
-  //   collection: "Home Decor Serving",
+  {
+    id: "home decor serving-c",
+    title: "Nebula Orion",
+    collection: "Home Decor Serving",
 
-  //   image: {
-  //     src: imageUrl("home decor serving-c.webp"),
-  //     alt: "Home Decor Serving resin C",
-  //   },
+    image: {
+      src: imageUrl("Nebula Orion.webp"),
+      alt: "Home Decor Serving resin c",
+    },
 
-  //   descriptionLead:
-  //     "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+    descriptionLead:
+      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
 
-  //   description:
-  //     "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+    description:
+      "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
 
-  //   instagramUrl: "https://www.instagram.com/",
-  //   commerceUrl: "",
-  // },
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "home decor serving-d",
+    title: "Nebula Carina",
+    collection: "Home Decor Serving",
+
+    image: {
+      src: imageUrl("Nebula Carina.webp"),
+      alt: "Home Decor Serving resin d",
+    },
+
+    descriptionLead:
+      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+
+    description:
+      "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "home decor serving-e",
+    title: "Raka",
+    collection: "Home Decor Serving",
+
+    image: {
+      src: imageUrl("Raka.webp"),
+      alt: "Home Decor Serving resin e",
+    },
+
+    descriptionLead:
+      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+
+    description:
+      "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "home decor serving-f",
+    title: "Raki",
+    collection: "Home Decor Serving",
+
+    image: {
+      src: imageUrl("Raki.webp"),
+      alt: "Home Decor Serving resin f",
+    },
+
+    descriptionLead:
+      "Karya yang mencakup filosofi karya, awal mula ide, dan detail tambahan lain dari karya tersebut.",
+
+    description:
+      "Home Decor Serving ini menampilkan permainan warna serta tekstur resin yang memberikan hasil berbeda pada setiap karya.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
 ];
 
 function Artistik5() {

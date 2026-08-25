@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Manusia pun demikian, di balik yang tampak, tersimpan singularitas, ruang terdalam segala riuh terhisap. Gelap bukan akhir dari cahaya, melainkan jeda tempat ia menetap, sebelum kembali menyala dalam senyap.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       "Pergi bukan berarti melupakan asal dan berubah bukan berarti kehilangan diri. Sebab sejauh apa pun perjalanan membawa kita, selalu ada sesuatu yang tetap mengalir dari tempat kita pernah berasal.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,17 +62,17 @@ const artworks = [
     description:
       "Segala yang pernah dilalui tidak menjadi sesuatu yang harus dilupakan, melainkan bagian yang membuatnya semakin dalam. Barangkali kasih memang demikian, tumbuh tanpa tergesa, tetapi meninggalkan jejak yang sulit hilang.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
-    id: "tas-c",
+    id: "tas-d",
     title: "Wening",
     collection: "Tas",
 
     image: {
       src: imageUrl("Wening_.webp"),
-      alt: "Tas resin C",
+      alt: "Tas resin D",
     },
 
     descriptionLead:
@@ -81,7 +81,26 @@ const artworks = [
     description:
       "Ketika perbedaan tidak lagi dipaksa untuk serupa, sesuatu yang lebih indah tumbuh di antaranya. Sebab keutuhan bukan tentang menjadi satu, melainkan tentang tahu bagaimana saling melengkapi.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
+    commerceUrl: "",
+  },
+  {
+    id: "tas-e",
+    title: "Jelaga",
+    collection: "Tas",
+
+    image: {
+      src: imageUrl("Jelaga.webp"),
+      alt: "Tas resin E",
+    },
+
+    descriptionLead:
+      "Tidak semua kepingan harus serupa untuk menjadi utuh. Ada yang datang membawa bentuknya sendiri, lalu menemukan tempat di antara yang lainnya.",
+
+    description:
+      "Ketika perbedaan tidak lagi dipaksa untuk serupa, sesuatu yang lebih indah tumbuh di antaranya. Sebab keutuhan bukan tentang menjadi satu, melainkan tentang tahu bagaimana saling melengkapi.",
+
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];

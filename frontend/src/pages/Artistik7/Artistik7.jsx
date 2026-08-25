@@ -24,7 +24,7 @@ const artworks = [
     description:
       "Setiap detak jam ini seolah membawa cerita tentang petualangan dan kebijaksanaan dalam perjalanan hidup.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -43,7 +43,7 @@ const artworks = [
     description:
       " Batu-batu kristal di tengah jam menggambarkan pecahan Aegis, perisai legendarisnya, menjadikan karya ini simbol hikmat yang memandu manusia menjalani hari demi hari dengan kebijaksanaan.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
@@ -62,17 +62,17 @@ const artworks = [
     description:
       "Perjalanan yang tak pernah menetap, sementara detik yang berputar mengajarkan bahwa segala yang datang akan pergi. Meninggalkan denting yang masih bergema dalam masa.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
   {
-    id: "jam meja-c",
+    id: "jam meja-d",
     title: "Kalantara",
     collection: "Jam Meja",
 
     image: {
       src: imageUrl("Kalantara.webp"),
-      alt: "Jam Meja resin C",
+      alt: "Jam Meja resin D",
     },
 
     descriptionLead:
@@ -81,7 +81,7 @@ const artworks = [
     description:
       "Setiap detik adalah perjalanan yang tak dapat ditahan, hanya dapat dirasakan sebelum menjelma kenangan.",
 
-    instagramUrl: "https://www.instagram.com/",
+    instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
   },
 ];
