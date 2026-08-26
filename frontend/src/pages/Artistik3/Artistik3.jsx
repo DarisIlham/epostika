@@ -45,6 +45,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Binar Garbha tidak dijual: sembunyikan tombol lihat harga
+    disableHargaLink: true,
   },
 
 ];

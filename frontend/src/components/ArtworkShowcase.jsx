@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ArrowIcon() {
   return (
     <svg
@@ -155,6 +157,31 @@ function ArtworkShowcase({
                   E-commerce
                   <ArrowIcon />
                 </a>
+              )}
+
+              {/* Link ke halaman HargaBarang berdasarkan nama file gambar */}
+              {/* Tombol Lihat di Harga: bisa dinonaktifkan atau diarahkan ke file gambar lain */}
+              {!artwork.disableHargaLink && artwork.image && (
+                (() => {
+                  // gunakan override bila tersedia, kalau tidak keluarkan dari src
+                  const targetFilename = artwork.priceImageTarget
+                    ? artwork.priceImageTarget
+                    : (artwork.image.src || "").split("?")[0].split("#")[0].split("/").pop();
+
+                  if (!targetFilename) return null;
+
+                  return (
+                    <Link
+                      to={`/harga?img=${encodeURIComponent(targetFilename)}&cat=${encodeURIComponent(
+                        artwork.collection,
+                      )}`}
+                      className="inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-xs font-semibold text-[#0d747c] bg-white/75 transition hover:border-[#0d747c] hover:bg-[#0d747c] hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
+                    >
+                      Lihat di Harga
+                      <ArrowIcon />
+                    </Link>
+                  );
+                })()
               )}
             </div>
           </div>

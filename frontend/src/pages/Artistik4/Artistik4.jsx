@@ -83,6 +83,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Arahkan ke produk Home Decor Pantai Perahu (gambar '3.webp')
+    priceImageTarget: "3.webp",
   },
 ];
 

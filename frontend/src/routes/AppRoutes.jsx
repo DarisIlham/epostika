@@ -11,6 +11,7 @@ import Artistik7 from "../pages/Artistik7/Artistik7.jsx";
 import Artistik8 from "../pages/Artistik8/Artistik8.jsx";
 import Artistik9 from "../pages/Artistik9/Artistik9.jsx";
 import Jelajah from "../pages/main/Jelajah.jsx";
+import HargaBarang from "../pages/HargaBarang.jsx";
 // import Acara from "../pages/Acara/Acara.jsx";
 
 function AppRoutes() {
@@ -28,6 +29,7 @@ function AppRoutes() {
       <Route path="/artistik8" element={<Artistik8 />} />
       <Route path="/artistik9" element={<Artistik9 />} />
       <Route path="/jelajah" element={<Jelajah />} />
+      <Route path="/harga" element={<HargaBarang />} />
        <Route path="*" element={<Navigate to="/" replace />} />
       {/* <Route path="/acara" element={<Acara />} /> */}
 

@@ -26,6 +26,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Jagad Bhumi diarahkan ke Gantungan Kunci (Loka Asmara)
+    priceImageTarget: "Loka Asmara.webp",
   },
   {
     id: "aksesoris-b",
@@ -45,6 +47,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Ranu diarahkan ke Gantungan Kunci (Loka Asmara)
+    priceImageTarget: "Loka Asmara.webp",
   },
   {
     id: "aksesoris-c",
@@ -140,6 +144,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Piaggio tidak dijual
+    disableHargaLink: true,
   },
 ];
 

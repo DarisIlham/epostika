@@ -45,6 +45,7 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    priceImageTarget: "Asmara.webp",
   },
   {
     id: "tas-c",
@@ -83,6 +84,7 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    priceImageTarget: "Asmara.webp",
   },
   {
     id: "tas-e",
@@ -102,6 +104,7 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    priceImageTarget: "Asmara.webp",
   },
 ];
 

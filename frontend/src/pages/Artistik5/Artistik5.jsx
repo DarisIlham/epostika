@@ -83,6 +83,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Arahkan Nebula Carina ke Nebula Orion yang punya harga sama
+    priceImageTarget: "Nebula Orion.webp",
   },
   {
     id: "home decor serving-e",
@@ -102,6 +104,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Raka tidak dijual
+    disableHargaLink: true,
   },
   {
     id: "home decor serving-f",
@@ -121,6 +125,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Raki tidak dijual
+    disableHargaLink: true,
   },
 ];
 

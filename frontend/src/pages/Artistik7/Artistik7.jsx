@@ -45,6 +45,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Athena tidak dijual sendiri: arahkan ke Hermes
+    priceImageTarget: "Hermes_.webp",
   },
   {
     id: "jam meja-c",
@@ -64,6 +66,8 @@ const artworks = [
 
     instagramUrl: "https://linktr.ee/sigur.id",
     commerceUrl: "",
+    // Kalendra diarahkan ke Kalantara
+    priceImageTarget: "Kalantara.webp",
   },
   {
     id: "jam meja-d",
