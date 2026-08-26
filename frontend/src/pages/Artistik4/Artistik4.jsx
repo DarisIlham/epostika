@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import ArtworkShowcase from "../../components/ArtworkShowcase.jsx";
 
@@ -153,6 +154,15 @@ function Artistik4() {
   return (
     <main className="min-h-svh border-t border-stone-950 bg-[#fdfcf8] px-4 py-8 text-stone-950 sm:px-6 sm:py-12 lg:px-10 lg:py-16">
       <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-6 flex justify-start">
+          <Link
+            to="/jelajah"
+            className="inline-flex items-center gap-2 rounded-full border border-[#315c59]/15 bg-white/80 px-4 py-2 text-xs font-semibold text-[#254846] shadow-sm transition hover:border-[#0d747c]/30 hover:bg-[#f2fbfb] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
+          >
+            ← Kembali ke Jelajah
+          </Link>
+        </div>
+
         {/* Headline */}
         <header
           className={`relative mx-auto flex min-h-20 w-full max-w-xl items-center justify-center overflow-hidden rounded-[2rem] border border-[#315c59]/10 bg-white/75 px-6 py-5 text-center shadow-[0_16px_45px_rgba(39,72,70,0.10)] backdrop-blur-sm transition-all duration-700 ease-out before:absolute before:inset-x-10 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-[#168494]/50 before:to-transparent after:absolute after:-right-8 after:-top-10 after:size-24 after:rounded-full after:bg-[#168494]/10 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${

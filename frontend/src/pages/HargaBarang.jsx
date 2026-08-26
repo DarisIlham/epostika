@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import LazyImage from "../components/LazyImage";
 
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
@@ -186,6 +187,23 @@ function formatCount(value) {
 function HargaBarang() {
   const [activeCategory, setActiveCategory] = useState("Semua");
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    const previousPath = location.state?.from;
+
+    if (previousPath && typeof previousPath === "string") {
+      navigate(previousPath, { replace: true });
+      return;
+    }
+
+    if (window.history.length > 1) {
+      navigate(-1);
+      return;
+    }
+
+    navigate("/jelajah", { replace: true });
+  };
 
   // Scroll to product if `?img=` query param is present (image filename)
   useEffect(() => {
@@ -267,6 +285,16 @@ function HargaBarang() {
       </div>
 
       <section className="relative z-10 mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+        <div className="mb-6 flex justify-start">
+          <button
+            type="button"
+            onClick={handleBack}
+            className="inline-flex items-center gap-2 rounded-full border border-[#315c59]/15 bg-white/80 px-4 py-2 text-xs font-semibold text-[#12395d] shadow-sm transition hover:border-[#58adbb]/40 hover:bg-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
+          >
+            ← Kembali
+          </button>
+        </div>
+
         <header className="mb-10 sm:mb-14">
           <div className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#2458b7] sm:text-xs">
             <span className="h-px w-10 bg-[#2458b7]" />
@@ -341,11 +369,10 @@ function HargaBarang() {
                   </span> */}
                 </div>
 
-                <img
+                <LazyImage
                   src={imageUrl(product.folder, product.image)}
                   alt={product.name}
-                  loading={index < 4 ? "eager" : "lazy"}
-                  decoding="async"
+                  priority={index < 4}
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}

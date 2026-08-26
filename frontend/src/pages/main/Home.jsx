@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LazyImage from "../../components/LazyImage";
 
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
@@ -184,12 +185,11 @@ function Home() {
       )}
 
       {/* Background berasal dari folder public backend. */}
-      <img
+      <LazyImage
         src={backgroundImage}
         alt=""
         aria-hidden="true"
-        fetchPriority="high"
-        decoding="async"
+        priority={true}
         className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center"
       />
 

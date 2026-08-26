@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import LazyImage from "../../components/LazyImage";
 
 const imageBaseUrl =
   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
@@ -126,6 +127,15 @@ function Jelajah() {
       </div>
 
       <section className="relative z-10 mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+        <div className="mb-6 flex justify-start">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 rounded-full border border-[#315c59]/15 bg-white/80 px-4 py-2 text-xs font-semibold text-[#254846] shadow-sm transition hover:border-[#0d747c]/30 hover:bg-[#f2fbfb] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
+          >
+            ← Kembali ke Beranda
+          </Link>
+        </div>
+
         <header className="mb-10 sm:mb-14 lg:flex lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="mb-5 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#0d747c] sm:text-xs">
@@ -193,11 +203,10 @@ function Jelajah() {
                   </span>
                 </div> */}
 
-                <img
+                <LazyImage
                   src={imageUrl(category.path, category.image)}
                   alt={`Preview karya ${category.title}`}
-                  loading={index < 3 ? "eager" : "lazy"}
-                  decoding="async"
+                  priority={index < 3}
                   onError={(event) => {
                     console.error(
                       "Gagal memuat gambar:",

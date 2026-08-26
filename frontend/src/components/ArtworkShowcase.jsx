@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import LazyImage from "./LazyImage";
 
 function ArrowIcon() {
   return (
@@ -32,13 +33,11 @@ function ArtworkImage({ src, alt, priority = false, className = "" }) {
         </div>
       </div>
 
-      <img
+      <LazyImage
         key={src}
         src={src}
         alt={alt}
-        loading={priority ? "eager" : "lazy"}
-        fetchPriority={priority ? "high" : "auto"}
-        decoding="async"
+        priority={priority}
         onError={(event) => {
           event.currentTarget.hidden = true;
         }}
@@ -64,6 +63,7 @@ function ArtworkShowcase({
 }) {
   const artworkPosition =
     navigationItems.findIndex((item) => item.id === artwork.id) + 1;
+  const location = useLocation();
 
   return (
     <article
@@ -175,6 +175,7 @@ function ArtworkShowcase({
                       to={`/harga?img=${encodeURIComponent(targetFilename)}&cat=${encodeURIComponent(
                         artwork.collection,
                       )}`}
+                      state={{ from: location.pathname }}
                       className="inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-xs font-semibold text-[#0d747c] bg-white/75 transition hover:border-[#0d747c] hover:bg-[#0d747c] hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/20 sm:text-sm"
                     >
                       Lihat di Harga
