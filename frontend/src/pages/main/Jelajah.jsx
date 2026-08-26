@@ -169,7 +169,7 @@ function Jelajah() {
 
             <a
               id="pesan-produk"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc5WfbIdapkbGmNwHcsdXYId4Cp-qEY38VntcNGa7Gx1KLk-Q/viewform?pli=1"
+              href="https://forms.gle/VxFEB99pQDbo5rRr6"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[#0d747c] px-5 py-2.5 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(13,116,124,0.25)] transition hover:bg-[#0b6469] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#168494]/25 sm:text-sm"
