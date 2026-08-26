@@ -412,6 +412,13 @@ function HargaBarang() {
                   <p className="mt-1 text-lg font-bold tracking-tight text-[#a80f12]">
                     {product.displayPrice}
                   </p>
+
+                  <a
+                    href="/jelajah#pesan-produk"
+                    className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#12395d] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#0d2f4d] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#58adbb]/25"
+                  >
+                    Pesan
+                  </a>
                 </div>
               </div>
             </article>

@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LazyImage from "../../components/LazyImage";
 
-const imageBaseUrl =
-  import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
+// const imageBaseUrl =
+//   import.meta.env.VITE_IMAGE_BASE_URL || "http://localhost:5000";
 
-const backgroundImage = `${imageBaseUrl}/images/home/sdad.webp`;
+// const backgroundImage = `${imageBaseUrl}/images/home/sdad.webp`;
 
 function ArrowIcon() {
   return (
@@ -165,7 +165,7 @@ function Home() {
               <span
                 className="home-intro-word block bg-[#58afb9] font-sora text-[clamp(3rem,17vw,12rem)] font-extrabold tracking-[0.02em] text-transparent"
                 style={{
-                  backgroundImage: `linear-gradient(rgba(16, 46, 78, 0.12), rgba(16, 46, 78, 0.12)), url("${backgroundImage}")`,
+                  backgroundImage: `linear-gradient(rgba(16, 46, 78, 0.12), rgba(16, 46, 78, 0.12)), url("$")`,
                   backgroundPosition: "center",
                   backgroundSize: "100vw 100vh",
                   backgroundAttachment: "fixed",
@@ -186,7 +186,7 @@ function Home() {
 
       {/* Background berasal dari folder public backend. */}
       <LazyImage
-        src={backgroundImage}
+        src={""}
         alt=""
         aria-hidden="true"
         priority={true}
