@@ -61,7 +61,8 @@ const categories = [
     id: 8,
     title: "Aksesoris",
     path: "/artistik9",
-    image: "Jagad Bhumi.webp",
+    image: "Luruh Meraki.webp",
+    subtitle: "Kalung & Gantungan Kunci",
   },
 ];
 
@@ -229,9 +230,13 @@ function Jelajah() {
                     Karya resin
                   </p>
 
-                  <h2 className="text-base font-semibold leading-tight text-[#254846] sm:text-lg">
+                  <h2 className="text-base font-semibold leading-tight text-[#254846] sm:text-lg mb-1">
                     {category.title}
                   </h2>
+                  <h5 className="text-xs font-medium leading-tight text-[#505857] sm:text-sm">
+                    {category.subtitle}
+                  </h5>
+
                 </div>
 
                 <span className="grid size-10 shrink-0 place-items-center rounded-full border border-[#0d747c]/15 text-[#0d747c] transition duration-300 group-hover:border-[#0d747c] group-hover:bg-[#0d747c] group-hover:text-white">
