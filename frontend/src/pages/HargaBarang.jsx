@@ -414,7 +414,9 @@ function HargaBarang() {
                   </p>
 
                   <a
-                    href="/jelajah#pesan-produk"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc5WfbIdapkbGmNwHcsdXYId4Cp-qEY38VntcNGa7Gx1KLk-Q/viewform?pli=1"
+                    target="_blank"
+                    rel="noreferrer"
                     className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-[#12395d] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#0d2f4d] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#58adbb]/25"
                   >
                     Pesan
