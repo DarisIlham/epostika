@@ -35,7 +35,7 @@ const categories = [
   },
   {
     id: 5,
-    title: "Home Decor Serving",
+    title: "Home Decor",
     path: "/artistik5",
     image: "Fluke.webp",
   },
